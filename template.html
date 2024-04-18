@@ -1,0 +1,242 @@
+<html>
+   <head>
+      <style>
+         @page {
+         @top-right {
+         box-sizing: border-box;
+         size: 420px 594px;
+         }
+         }
+         #user_info{
+         margin: 30px 30px 0px 30px;
+         padding: 0px;
+         font-family: sans-serif;
+         }
+         .user_info header {
+         padding: 10px 0;
+         margin-bottom: 20px;
+         }
+         .name {
+         padding-left:30px;
+         padding-top:20px;
+         font-size: 30px;
+         text-transform: capitalize;
+         }
+         .user_info table {
+         width: 100%;
+         border-collapse: collapse;
+         border-spacing: 0;
+         margin-bottom: 20px
+         }
+         .value_name {
+         padding: 11px;
+         font-size: 1rem;
+         font-weight: lighter;
+         border-bottom: 1px solid #fff;
+         text-transform: capitalize;
+         }
+         .key_name {
+         padding: 11px;
+         font-size: 1rem;
+         font-weight: 600;
+         border-bottom: 1px solid #fff;
+         text-transform: capitalize;
+         }
+         div.logo-container {
+         float: left;
+         }
+         .email{
+         text-transform: lowercase !important;
+         }
+         .certificate-page {
+         page-break-inside: avoid; /* Avoid splitting content within a page */
+         page-break-after: always; /* Force page break after each section */
+         }
+      </style>
+   </head>
+   <body>
+      <div id="user_info">
+         <div class="user_info">
+            <div>
+               <header>
+                  <div class="row">
+                     <div class="logo-container">
+                        <img  src={{imageUrl}} height='95px' width="95px" style="margin-right: 20px;" alt="profile photo" />
+                     </div>
+                     <div class="col company-details">
+                        <div class="name">{{fullName}}</div>
+                        <div class="email"><a href="mailto:acme@example.com">{{{email}}}</a></div>
+                     </div>
+                  </div>
+                  <div style="clear: both;"></div>
+               </header>
+               <main>
+                  <div class="row contacts">
+                     <div class="col user_info-to">
+                        <h2 class="to">Informasi Pengguna</h2>
+                     </div>
+                  </div>
+                  <table border="0" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td class="key_name">Nama</td>
+                           <td class="value_name">{{fullName}}</td>
+                           <td class="key_name">Riwayat Penyakit</td>
+                           <td class="value_name" >
+                              {{diseaseInfo}}
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Email</td>
+                           <td class="value_name">
+                              <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+                           </td>
+                           <td class="key_name">Nama Ayah</td>
+                           <td class="value_name">{{fatherName}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">No. KTP</td>
+                           <td class="value_name">{{idNumber}}</td>
+                           <td class="key_name">Pekerjaan Ayah</td>
+                           <td class="value_name">{{fatherJob}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Jenis Kelamin</td>
+                           <td class="value_name">{{gender}}</td>
+                           <td class="key_name">Nama Ibu</td>
+                           <td class="value_name">{{motherName}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Tempat Lahir</td>
+                           <td class="value_name">{{placeOfBirth}}</td>
+                           <td class="key_name">Pekerjaan Ibu</td>
+                           <td class="value_name">{{motherJob}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Tanggal Lahir</td>
+                           <td class="value_name">{{birthDate}}</td>
+                           <td class="key_name">No. Telepon Orang Tua</td>
+                           <td class="value_name">{{parentContactNo}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Agama</td>
+                           <td class="value_name">{{religion}}</td>
+                           <td class="key_name">Nama Wali</td>
+                           <td class="value_name">{{guardianName}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">No. Telepon</td>
+                           <td class="value_name">{{phoneNumber}}</td>
+                           <td class="key_name">Pekerjaan Wali</td>
+                           <td class="value_name">{{guardianJob}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Status
+                              Pernikahan
+                           </td>
+                           <td class="value_name">{{maritalStatus}}</td>
+                           <td class="key_name">No.Telepon Wali</td>
+                           <td class="value_name">{{guardianContactNo}}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </main>
+               <main>
+                  <div class="row contacts">
+                     <div class="col user_info-to">
+                        <h2 class="to">Alamat</h2>
+                     </div>
+                  </div>
+                  <table border="0" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td class="key_name">Kabupaten</td>
+                           <td class="value_name">{{regency}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Kecamatan</td>
+                           <td class="value_name">{{district}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Desa/Kelurahan</td>
+                           <td class="value_name">{{village}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Alamat</td>
+                           <td class="value_name">{{address}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">RT</td>
+                           <td class="value_name">{RT}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">RW</td>
+                           <td class="value_name">{RW}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </main>
+               <div class="certificate-page"></div>
+               <main>
+                  <div class="row contacts">
+                     <div class="col user_info-to">
+                        <h2 class="to">Pendidikan</h2>
+                     </div>
+                  </div>
+                  <table border="0" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td class="key_name">Pendidikan Terakhir</td>
+                           <td class="value_name">{{qualification}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Status</td>
+                           <td class="value_name">{{educationStatus}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Tahun Lulus</td>
+                           <td class="value_name">{{educationYear}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">IPK</td>
+                           <td class="value_name">{{ipk}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Nama Sekolah</td>
+                           <td class="value_name">{{schoolName}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Jurusan</td>
+                           <td class="value_name">{{major}}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </main>
+               <main>
+                  <div class="row contacts">
+                     <div class="col user_info-to">
+                        <h2 class="to">Lainnya</h2>
+                     </div>
+                  </div>
+                  <table border="0" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td class="key_name">Hobi (boleh menyebutkan
+                              lebih dari satu)*
+                           </td>
+                           <td class="value_name">{{hobbies}}</td>
+                        </tr>
+                        <tr>
+                           <td class="key_name">Cita-cita (sebutkan
+                              alasannya)
+                           </td>
+                           <td class="value_name">{{careerGoals}}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </main>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
