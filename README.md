@@ -2,8 +2,8 @@
 
 
 ticket : 
-1. https://harukaedu.atlassian.net/browse/FEA-2367
-2. https://harukaedu.atlassian.net/browse/FEA-2369
+### https://harukaedu.atlassian.net/browse/FEA-2367
+### https://harukaedu.atlassian.net/browse/FEA-2369
    
 
 
