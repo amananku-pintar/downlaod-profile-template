@@ -33,6 +33,7 @@
          font-size: 1rem;
          font-weight: lighter;
          border-bottom: 1px solid #fff;
+         word-break: break-word;
          /* text-transform: capitalize; */
          }
          .key_name {
@@ -41,6 +42,10 @@
          font-weight: 600;
          border-bottom: 1px solid #fff;
          text-transform: capitalize;
+         }
+         .give_height{
+         height: 40px;
+         vertical-align: top;
          }
          div.logo-container {
          float: left;
@@ -81,10 +86,6 @@
                         <tr>
                            <td class="key_name">Nama</td>
                            <td class="value_name">{{fullName}}</td>
-                           <td class="key_name">Riwayat Penyakit</td>
-                           <td class="value_name" >
-                              {{diseaseInfo}}
-                           </td>
                         </tr>
                         <tr>
                            <td class="key_name">Email</td>
@@ -142,6 +143,16 @@
                   </table>
                </main>
                <main>
+                  <table border="0" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td class="key_name give_height">Riwayat Penyakit</td>
+                           <td class="value_name" > {{diseaseInfo}}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </main>
+               <main>
                   <div class="row contacts">
                      <div class="col user_info-to">
                         <h2 class="to">Alamat</h2>
@@ -162,7 +173,7 @@
                            <td class="value_name">{{village}}</td>
                         </tr>
                         <tr>
-                           <td class="key_name">Alamat</td>
+                           <td class="key_name give_height">Alamat</td>
                            <td class="value_name">{{address}}</td>
                         </tr>
                         <tr>
@@ -176,7 +187,7 @@
                      </tbody>
                   </table>
                </main>
-               <div class="certificate-page"></div>
+               <!-- <div class="certificate-page"></div> -->
                <main>
                   <div class="row contacts">
                      <div class="col user_info-to">
@@ -221,13 +232,13 @@
                   <table border="0" cellspacing="0" cellpadding="0">
                      <tbody>
                         <tr>
-                           <td class="key_name">Hobi (boleh menyebutkan
+                           <td class="key_name give_height">Hobi (boleh menyebutkan
                               lebih dari satu)*
                            </td>
                            <td class="value_name">{{hobbies}}</td>
                         </tr>
                         <tr>
-                           <td class="key_name">Cita-cita (sebutkan
+                           <td class="key_name give_height">Cita-cita (sebutkan
                               alasannya)
                            </td>
                            <td class="value_name">{{careerGoals}}</td>
