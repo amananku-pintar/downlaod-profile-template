@@ -4,6 +4,7 @@
 ticket : 
 1. https://harukaedu.atlassian.net/browse/FEA-2367
 2. https://harukaedu.atlassian.net/browse/FEA-2369
+   
 
 
 
@@ -12,4 +13,4 @@ ticket :
 2. [EMAIL_REJECTED](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/email-rejected.html)
 
 
-2. [EMAIL_SELECTED](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/email-selected.html)
+3. [EMAIL_SELECTED](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/email-selected.html)
