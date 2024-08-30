@@ -17,3 +17,4 @@ Ticket :
 
 3. [EMAIL_SELECTED](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/email-selected.html)
 4. [ASSIGNED COURSE PARTICULAR DURATION](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/assigned-course-particular-duration.html)
+5. 4. [ASSIGNED COURSE DEADLINE](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/assigned-course-deadline.html)
