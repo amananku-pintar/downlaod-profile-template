@@ -1,148 +1,318 @@
 <!DOCTYPE html PUBLIC "-//OPENHTMLTOPDF//DOC XHTML Character Entities Only 1.0//EN" "">
 <html>
-    <head>
-        <style>
-            @page {
-                margin: 20px 40px;
-                box-sizing: border-box;
-                size: A4;
-            }
-            .main-container {
-        width:210mm;
+  <head>
+    <style>
+      @page {
+        margin: 0px;
         box-sizing: border-box;
-        height: 297mm;
+        size: 370.41667mm 285.750264583mm;
+      }
+      table {
+        -fs-table-paginate: paginate;
+      }
+
+      tr,
+      thead,
+      tfoot {
+        page-break-inside: avoid;
+      }
+
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 14px;
+      }
+      body {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .certificate-page {
+        page-break-inside: avoid; /* Avoid splitting content within a page */
+        page-break-after: always; /* Force page break after each section */
+      }
+
+      .main-container {
+        width: 370.41667mm;
+        box-sizing: border-box;
+        height: 285.750264583mm;
+        padding: 54px;
+        background: #f2f1f0;
         position: relative;
       }
-            *,
-            ::after,
-            ::before {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }
-            table,
-            tr,
-            td {
-                -fs-table-paginate: paginate;
-                border-collapse: collapse;
-                -fs-border-rendering: no-bevel;
-            }
-            tr,
-            thead,
-            tfoot,
-            td {
-                page-break-inside: avoid;
-            }
-            #user_info {
-                padding: 0px;
-                font-family: sans-serif;
-            }
-            .user_info header {
-                padding: 10px 0;
-                margin-bottom: 20px;
-            }
-            .topicHead {
-                color: #848484;
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 18px;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-            }
-            .summaryDesc {
-                color: #535353;
-                font-family: Arial;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 18px;
-                list-style-type: none;
-            }
-            .name {
-                padding-top: 20px;
-                color: #333;
-                font-size: 26px;
-                font-weight: 700;
-                margin: 0;
-                word-wrap: break-word;
-                /* text-transform: capitalize; */
-            }
-            .marginTop {
-                margin-top: 12px;
-            }
-            .marginTop2 {
-                margin-top: 4px;
-            }
-            .user_info table {
-                width: 100%;
-                border-collapse: collapse;
-                border-spacing: 0;
-                margin-bottom: 20px;
-            }
-            .value_name {
-                padding: 11px;
-                font-size: 1rem;
-                font-weight: lighter;
-                border-bottom: 1px solid #fff;
-                word-break: break-word;
-            }
-            .key_name {
-                padding: 11px;
-                font-size: 1rem;
-                font-weight: 600;
-                border-bottom: 1px solid #fff;
-                text-transform: capitalize;
-            }
-            .give_height {
-                height: 40px;
-                vertical-align: top;
-            }
-            div.logo-container {
-                float: left;
-            }
-            .designation {
-                color: #535353;
-                font-size: 18px;
-                margin: 0;
-                margin-bottom: 16px;
-            }
-            .email {
-                text-transform: lowercase !important;
-            }
-            .certificate-page {
-                page-break-inside: always; /* Avoid splitting content within a page */
-                page-break-after: always; /* Force page break after each section */
-            }
-            td {
-                word-wrap: break-word;
-                width: 25%;
-            }
-            .inner-border-container {
-                height: 100%;
-                width: 100%;
-                background: #fff;
-                position: relative;
-                box-sizing: border-box;
-            }
-            .left-container {
-                box-sizing: border-box;
-                float: left;
-                padding-bottom: 66px;
-                padding-right: 66px;
-                height:100%;
-                width: 70%;
-                position: relative;
-            }
-            .right-container {
-                box-sizing: border-box;
-                float: right;
-                padding-bottom: 66px;
-                padding-right: 60px;
-                width: 30%;
-                height:100%;
-                position: relative;
-            }
-            .userPosition {
+      .outer-border-container {
+        border: 2px solid #bbb;
+        height: 972px;
+        width: 100%;
+        background: #fff;
+        position: relative;
+        box-sizing: border-box;
+        padding: 4px;
+      }
+
+      .border-corner {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        border: 2px solid #bbb;
+      }
+      #top-left-corner {
+        top: -11px;
+        left: -11px;
+      }
+      #top-right-corner {
+        top: -11px;
+        right: -11px;
+      }
+      #bottom-left-corner {
+        bottom: -11px;
+        left: -11px;
+      }
+      #bottom-right-corner {
+        bottom: -11px;
+        right: -11px;
+      }
+      .inner-border-container {
+        border: 2px solid #bbb;
+        height: 960px;
+        width: 100%;
+        background: #fff;
+        position: relative;
+        box-sizing: border-box;
+      }
+      /* .inner-container:after {
+        content: " ";
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        right: 7px;
+        bottom: 7px;
+        border: 2px solid #bbb;
+      } */
+      .pintar-logo {
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 126px;
+        z-index: 99;
+      }
+      .left-container {
+        box-sizing: border-box;
+        float: left;
+        padding-left: 66px;
+        padding-bottom: 66px;
+        padding-right: 66px;
+        padding-top: 182px;
+        height: 960px;
+        width: 366px;
+        position: relative;
+      }
+      .right-container {
+        box-sizing: border-box;
+        float: right;
+        padding-top: 120px;
+        padding-bottom: 66px;
+        padding-right: 60px;
+        padding-left: 40px;
+        width: 908px;
+        height: 960px;
+        position: relative;
+      }
+
+      .certificate-completion-container p {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        color: #535353;
+        font-family: 'Pintar Bold';
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .certificate-completion-container > p:first-child {
+        margin-bottom: 30px;
+      }
+
+      .certificate-id-container {
+        box-sizing: border-box;
+        position: absolute;
+        padding-bottom: 66px;
+        padding-left: 66px;
+        width: 293px;
+        bottom: 0;
+      }
+      .certificate-id-container .title {
+        box-sizing: border-box;
+        color: #a58c6d;
+        font-family: 'Pintar Bold';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        text-transform: uppercase;
+      }
+      .certificate-id-container .value {
+        box-sizing: border-box;
+        color: #535353;
+        font-family: 'Pintar Regular';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.24px;
+      }
+      .certificate-description .certificate-description-text {
+        box-sizing: border-box;
+        color: #535353;
+        font-family: 'Pintar Regular';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.24px;
+      }
+      .certificate-description .username {
+        box-sizing: border-box;
+        color: #a58c6d;
+        font-family: 'Pintar Display';
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.56px;
+      }
+      .certificate-description .course-name {
+        box-sizing: border-box;
+        color: #535353;
+        font-family: Pintar Text;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 33.6px */
+        letter-spacing: -0.28px;
+      }
+      .remark {
+        box-sizing: border-box;
+        color: #a63227;
+        font-family: 'Pintar Bold';
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.24px;
+      }
+      .signature-box p {
+        box-sizing: border-box;
+        font-family: 'Pintar Regular';
+        color: #535353;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.2px;
+      }
+
+      .ceo-name {
+        box-sizing: border-box;
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        line-height: normal;
+        letter-spacing: 0.2px;
+        font-weight: 400;
+      }
+      .footer {
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 66px;
+      }
+      .footer > div > div {
+        box-sizing: border-box;
+        display: inline-block;
+      }
+      .learning_provider_box {
+        box-sizing: border-box;
+        margin-right: 40px;
+      }
+
+      .learning_provider_box > p,
+      .dudica_logo_box > p {
+        box-sizing: border-box;
+        color: #535353;
+        font-family: 'Pintar Regular';
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.0125rem;
+      }
+
+      .competency-container {
+        box-sizing: border-box;
+        padding: 66px;
+        padding-top: 0;
+        height: 956px;
+        width: 1276px;
+        position: relative;
+      }
+      .competency-container .competency-heading {
+        color: #535353;
+        font-family: 'Pintar Text';
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 64px; /* 133.333% */
+        letter-spacing: -0.48px;
+        text-align: left;
+        padding-top: 188px;
+      }
+
+      .competency-list-container {
+        list-style: none;
+      }
+
+      .competency-list-container .competency-list-title {
+        page-break-inside: avoid;
+        color: #333;
+        font-family: 'Pintar Bold';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: 0.4px;
+      }
+      .competency-list-values-list {
+        padding: 20px;
+        margin-left: 10px;
+      }
+      .competency-list-title-value {
+        color: #535353;
+        font-family: 'Pintar Text';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 38.4px */
+      }
+      .hidden {
+        display: none;
+      }
+
+      .dudica_logo_box img {
+        margin-top: 8px;
+        margin-right: 20px;
+        height: 54px;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+      .userPosition {
                 color: #333;
                 font-family: Arial;
                 font-size: 11px;
@@ -189,122 +359,63 @@ font-style: normal;
 font-weight: 700;
 line-height: 18px;
             }
-            .paageBrk{
-                page-break-inside: always; /* Avoid splitting content within a page */
-                page-break-after: always; /* Force page break after each section */
-            }
-        </style>
-    </head>
-    <body>
-        <div class="main-container certificate-page"
-        style="
-        box-sizing: border-box;
-        position: fixed;
-        z-index: -1;
-        top: 0;
-        left: 0;
-      "
-           >
-            <div class="user_info">
-                <div >
-                    <header>
-                        <div class="row">
-                            <div>
-                                <div class="name">
-                                    <div>{{fullName}}</div>
-                                </div>
-                                <div class="designation">{{designation}}</div>
-                            </div>
-                        </div>
-                        <div style="clear: both;"></div>
-                    </header>
-                    <div class="inner-border-container" style="box-sizing: border-box;">
-                        <div class="left-container" style="box-sizing: border-box;">
-                            <main>
-                                <div class="row contacts">
-                                    <div class="col user_info-to">
-                                        <h2 class="to topicHead">Summary</h2>
-                                    </div>
-                                </div>
-                                <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
-                                    <tbody>
-                                        <div class="summaryDesc marginTop">{{summary}}</div>
-                                    </tbody>
-                                </table>
-                            </main>
-                            <div class="paageBrk"  style="box-sizing: border-box; z-index: 999"><main >
-                                <div class="row contacts">
-                                    <div class="col user_info-to">
-                                        <h2 class="to topicHead">Experience</h2>
-                                    </div>
-                                </div>
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                        <div class="marginTop">{{experience}}</div>
-                                    </tbody>
-                                </table>
-                            </main>
-                            <main >
-                                <div class="row contacts">
-                                    <div class="col user_info-to">
-                                        <h2 class="to topicHead">Education</h2>
-                                    </div>
-                                </div>
-                                <table border="0" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                        <div class="marginTop">{{education}}</div>
-                                       
-                                    </tbody>
-                                </table>
-                            </main></div>
-                        
-                        </div>
-                        <div style="box-sizing: border-box;" class="right-container">
-                            <main>
-                                <div class="row contacts">
-                                    <div class="col user_info-to">
-                                        <div class="summaryDesc">{{email}}</div>
-                                    </div>
-                                </div>
-                                <div class="row contacts">
-                                    <div class="col user_info-to">
-                                        <div class="summaryDesc marginTop2">{{phone}}</div>
-                                    </div>
-                                </div>
-                                <div class="row contacts">
-                                    <div class="col user_info-to">
-                                        <div class="summaryDesc marginTop2">{{location}}</div>
-                                    </div>
-                                </div>
-                            </main>
-                            <main>
-                                <div class="row contacts marginTop">
-                                    <div class="col user_info-to">
-                                        <h2 class="to social">Skills</h2>
-                                    </div>
-                                </div>
-                                <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
-                                    <tbody>
-                                        <div class="marginTop">{{skills}}</div>
-                                    </tbody>
-                                </table>
-                            </main>
-                            <main class="{{competencyPageClass}}">
-                                <div class="row contacts">
-                                    <div class="col user_info-to">
-                                        <h2 class="to social">Social Media and Portfolio</h2>
-                                    </div>
-                                </div>
-                                <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
-                                    <tbody>
-                                        <div class="marginTop">{{socialMedia}}</div>
-                                    </tbody>
-                                </table>
-                            </main>
-                        </div>
-                    </div>
+    </style>
+  </head>
+  <body style="box-sizing: border-box">
+    <div
+      class="main-container certificate-page {{competencyPageClass}}"
+      style="box-sizing: border-box; z-index: 999"
+    >
+    <header>
+        <div class="row">
+            <div>
+                <div class="name">
+                    <div>{{fullName}}</div>
                 </div>
+                <div class="designation">{{designation}}</div>
             </div>
         </div>
-    </body>
+        <div style="clear: both;"></div>
+    </header>
+      <div class="outer-border-container" style="box-sizing: border-box">
+     
+        <div class="inner-border-container" style="box-sizing: border-box">
+          <div class="competency-container">
+            <table
+              border="0"
+              cellspacing="0"
+              cellpadding="0"
+              style="width: 1144px"
+            >
+              <thead>
+                <tr>
+                  <th colspan="2" class="competency-heading">
+                    Kompetensi yang dilatih
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" colspan="2">
+                    <ul class="competency-list-container">
+                        <div class="marginTop">{{experience}}</div>
+                        <div class="marginTop">{{education}}</div>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td style="padding: 46px" rowspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
