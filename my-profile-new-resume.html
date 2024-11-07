@@ -7,6 +7,12 @@
                 box-sizing: border-box;
                 size: A4;
             }
+            .main-container {
+        width:210mm;
+        box-sizing: border-box;
+        height: 297mm;
+        position: relative;
+      }
             *,
             ::after,
             ::before {
@@ -104,8 +110,7 @@
                 text-transform: lowercase !important;
             }
             .certificate-page {
-                page-break-inside: avoid; /* Avoid splitting content within a page */
-                page-break-after: always; /* Force page break after each section */
+                page-break-inside: always; /* Avoid splitting content within a page */
             }
             td {
                 word-wrap: break-word;
@@ -173,13 +178,29 @@
                 font-size: 11px;
                 text-decoration-line: underline !important;
                 word-break: break-all;
+                list-style-type: none;
+            }
+            .social{
+                color: #535353;
+font-family: Arial;
+font-size: 11px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px;
             }
         </style>
     </head>
     <body>
-        <div  id="user_info">
+        <div class="main-container certificate-page"
+        style="
+          box-sizing: border-box;
+          position: fixed;
+          z-index: -1;
+          top: 0;
+          left: 0;
+        ">
             <div class="user_info">
-                <div>
+                <div >
                     <header>
                         <div class="row">
                             <div>
@@ -205,7 +226,8 @@
                                     </tbody>
                                 </table>
                             </main>
-                            <main >
+                            
+                            <main>
                                 <div class="row contacts">
                                     <div class="col user_info-to">
                                         <h2 class="to topicHead">Experience</h2>
@@ -217,7 +239,7 @@
                                     </tbody>
                                 </table>
                             </main>
-                            <main class="certificate-page">
+                            <main >
                                 <div class="row contacts">
                                     <div class="col user_info-to">
                                         <h2 class="to topicHead">Education</h2>
@@ -226,10 +248,7 @@
                                 <table border="0" cellspacing="0" cellpadding="0">
                                     <tbody>
                                         <div class="marginTop">{{education}}</div>
-                                        <!-- <div class="userPosition">seniror</div>
-                                        <div class="companyName">enterprise name</div>
-                                        <div class="userDuration">yers</div>
-                                        <div class="description">desc</div> -->
+                                       
                                     </tbody>
                                 </table>
                             </main>
@@ -255,7 +274,7 @@
                             <main>
                                 <div class="row contacts marginTop">
                                     <div class="col user_info-to">
-                                        <h2 class="to topicHead">Skills</h2>
+                                        <h2 class="to social">Skills</h2>
                                     </div>
                                 </div>
                                 <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
@@ -267,7 +286,7 @@
                             <main class="{{competencyPageClass}}">
                                 <div class="row contacts">
                                     <div class="col user_info-to">
-                                        <h2 class="to topicHead">Social Media and Portfolio</h2>
+                                        <h2 class="to social">Social Media and Portfolio</h2>
                                     </div>
                                 </div>
                                 <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
