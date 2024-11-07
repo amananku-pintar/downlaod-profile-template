@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//OPENHTMLTOPDF//DOC XHTML Character Entities Only 1.0//EN" "">
+<html>
+    <head>
+        <style>
+            @page {
+                margin: 90px 90px 0px 90px;
+                box-sizing: border-box;
+                size: A4;
+            }
+            *,
+            ::after,
+            ::before {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            table,
+            tr,
+            td {
+                -fs-table-paginate: paginate;
+                border-collapse: collapse;
+                -fs-border-rendering: no-bevel;
+            }
+            tr,
+            thead,
+            tfoot,
+            td {
+                page-break-inside: avoid;
+            }
+            #user_info {
+                padding: 0px;
+                font-family: sans-serif;
+            }
+            .user_info header {
+                padding: 10px 0;
+                margin-bottom: 20px;
+            }
+            .topicHead {
+                color: #848484;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            .summaryDesc {
+                color: #535353;
+                font-family: Arial;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+            .name {
+                padding-top: 20px;
+                color: #333;
+                font-size: 26px;
+                font-weight: 700;
+                margin: 0;
+                word-wrap: break-word;
+                /* text-transform: capitalize; */
+            }
+            .marginTop {
+                margin-top: 12px;
+            }
+            .user_info table {
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 0;
+                margin-bottom: 20px;
+            }
+            .value_name {
+                padding: 11px;
+                font-size: 1rem;
+                font-weight: lighter;
+                border-bottom: 1px solid #fff;
+                word-break: break-word;
+            }
+            .key_name {
+                padding: 11px;
+                font-size: 1rem;
+                font-weight: 600;
+                border-bottom: 1px solid #fff;
+                text-transform: capitalize;
+            }
+            .give_height {
+                height: 40px;
+                vertical-align: top;
+            }
+            div.logo-container {
+                float: left;
+            }
+            .designation {
+                color: #535353;
+                font-size: 18px;
+                margin: 0;
+                margin-bottom: 16px;
+            }
+            .email {
+                text-transform: lowercase !important;
+            }
+            .certificate-page {
+                page-break-inside: avoid; /* Avoid splitting content within a page */
+                page-break-after: always; /* Force page break after each section */
+            }
+            td {
+                word-wrap: break-word;
+                width: 25%;
+            }
+            .inner-border-container {
+                height: 960px;
+                width: 100%;
+                background: #fff;
+                position: relative;
+                box-sizing: border-box;
+            }
+            .left-container {
+                box-sizing: border-box;
+                float: left;
+                padding-bottom: 66px;
+                padding-right: 66px;
+                height: 960px;
+                width: 366px;
+                position: relative;
+            }
+            .right-container {
+                box-sizing: border-box;
+                float: right;
+                padding-bottom: 66px;
+                padding-right: 60px;
+                width: 408px;
+                height: 960px;
+                position: relative;
+            }
+            .userPosition {
+                color: #333;
+                font-family: Arial;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px;
+            }
+            .companyName {
+                color: #535353;
+                font-family: Arial;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+            .userDuration {
+                color: #848484;
+                font-family: Arial;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+            .description {
+                color: #535353;
+                font-family: Arial;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+            .socialMediaItem {
+                color: #03629e !important;
+                font-size: 11px;
+                text-decoration-line: underline !important;
+                word-break: break-all;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="certificate-page" id="user_info">
+            <div class="user_info">
+                <div>
+                    <header>
+                        <div class="row">
+                            <div>
+                                <div class="name">
+                                    <div>{{fullName}}</div>
+                                </div>
+                                <div class="designation">{{designation}}</div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </header>
+                    <div class="inner-border-container" style="box-sizing: border-box;">
+                        <div class="left-container" style="box-sizing: border-box;">
+                            <main>
+                                <div class="row contacts">
+                                    <div class="col user_info-to">
+                                        <h2 class="to topicHead">Summary</h2>
+                                    </div>
+                                </div>
+                                <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
+                                    <tbody>
+                                        <div class="summaryDesc marginTop">{{summary}}</div>
+                                    </tbody>
+                                </table>
+                            </main>
+                            <main class="certificate-page">
+                                <div class="row contacts">
+                                    <div class="col user_info-to">
+                                        <h2 class="to topicHead">Experience</h2>
+                                    </div>
+                                </div>
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <div class="marginTop">{{experience}}</div>
+                                    </tbody>
+                                </table>
+                            </main>
+                            <main class="certificate-page">
+                                <div class="row contacts">
+                                    <div class="col user_info-to">
+                                        <h2 class="to topicHead">Education</h2>
+                                    </div>
+                                </div>
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <div class="marginTop">{{education}}</div>
+                                        <!-- <div class="userPosition">seniror</div>
+                                        <div class="companyName">enterprise name</div>
+                                        <div class="userDuration">yers</div>
+                                        <div class="description">desc</div> -->
+                                    </tbody>
+                                </table>
+                            </main>
+                        </div>
+                        <div style="box-sizing: border-box;" class="right-container">
+                            <main>
+                                <div class="row contacts">
+                                    <div class="col user_info-to">
+                                        <div class="summaryDesc">{{email}}</div>
+                                    </div>
+                                </div>
+                                <div class="row contacts">
+                                    <div class="col user_info-to">
+                                        <div class="summaryDesc marginTop">{{phone}}</div>
+                                    </div>
+                                </div>
+                                <div class="row contacts">
+                                    <div class="col user_info-to">
+                                        <div class="summaryDesc marginTop">{{location}}</div>
+                                    </div>
+                                </div>
+                            </main>
+                            <main>
+                                <div class="row contacts marginTop">
+                                    <div class="col user_info-to">
+                                        <h2 class="to topicHead">Skills</h2>
+                                    </div>
+                                </div>
+                                <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
+                                    <tbody>
+                                        <div class="marginTop">{{skills}}</div>
+                                    </tbody>
+                                </table>
+                            </main>
+                            <main>
+                                <div class="row contacts">
+                                    <div class="col user_info-to">
+                                        <h2 class="to topicHead">Social Media and Portfolio</h2>
+                                    </div>
+                                </div>
+                                <table style="-fs-table-paginate: paginate; page-break-inside: avoid;" border="0" cellspacing="0">
+                                    <tbody>
+                                        <div class="marginTop">{{socialMedia}}</div>
+                                    </tbody>
+                                </table>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
