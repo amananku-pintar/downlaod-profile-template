@@ -110,7 +110,7 @@
                 text-transform: lowercase !important;
             }
             .certificate-page {
-                page-break-inside: always; /* Avoid splitting content within a page */
+                page-break-inside: avoid; /* Avoid splitting content within a page */
                 page-break-after: always; /* Force page break after each section */
             }
             td {
@@ -189,6 +189,10 @@ font-style: normal;
 font-weight: 700;
 line-height: 18px;
             }
+            .paageBrk{
+                page-break-inside: always; /* Avoid splitting content within a page */
+                page-break-after: always; /* Force page break after each section */
+            }
         </style>
     </head>
     <body>
@@ -227,8 +231,7 @@ line-height: 18px;
                                     </tbody>
                                 </table>
                             </main>
-                            
-                            <main>
+                            <div className="paageBrk">    <main>
                                 <div class="row contacts">
                                     <div class="col user_info-to">
                                         <h2 class="to topicHead">Experience</h2>
@@ -252,7 +255,8 @@ line-height: 18px;
                                        
                                     </tbody>
                                 </table>
-                            </main>
+                            </main></div>
+                        
                         </div>
                         <div style="box-sizing: border-box;" class="right-container">
                             <main>
