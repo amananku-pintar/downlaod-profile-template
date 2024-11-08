@@ -380,80 +380,35 @@
                         <div class="designation">{{designation}}</div>
                     </div>
                 </div>
-                <div style="clear: both;"></div>
             </header>
             <div class="outer-border-container left-container" style="box-sizing: border-box;padding:0px 0px 12px 48px">
                 <div class="inner-border-container" style="box-sizing: border-box;">
                     <div class="competency-container">
-                        <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th colspan="2" class="competency-heading marginTop">
-                                        Summary
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td >
-                                        <ul class="competency-list-container">
-                                            <div class="marginTop">{{summary}}</div>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td style="padding: 6px;" rowspan="2">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </tfoot>
-                            <thead>
-                                <tr>
-                                    <th colspan="2" class="competency-heading marginTop">
-                                        Experience
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td >
-                                        <ul class="competency-list-container">
-                                            <div class="marginTop">{{experience}}</div>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        
-                            <thead>
-                                <tr>
-                                    <th colspan="2" class="competency-heading marginTop">
-                                        Education
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td >
-                                        <ul class="competency-list-container">
-                                            <div class="marginTop">{{education}}</div>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td style="padding: 6px;" rowspan="2">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
+                 
+                              <div class="competency-heading">
+                                Summary
+                              </div>
+                                <div class="competency-list-container">
+                                  {summary}
+                                </div>
+                                <div class="competency-heading">
+                                    experience
+                                  </div>
+                                    <div class="competency-list-container">
+                                      {experience}
+                                    </div>
+                                    <div class="competency-heading">
+                                        education
+                                      </div>
+                                        <div class="competency-list-container">
+                                          {education}
+                                        </div>
+                    
+                       
+                      </div>
+                      
                 </div>
+                
             </div>
             <div class="right-container">
                 <div style="box-sizing: border-box;" class="certificate-description">
@@ -487,5 +442,6 @@
                 </div>
             </div>
         </div>
+        
     </body>
 </html>
