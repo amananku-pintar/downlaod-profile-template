@@ -5,7 +5,7 @@
       @page {
         margin: 0px;
         box-sizing: border-box;
-        size: 370.41667mm 285.750264583mm;
+        size: 210mm 297mm;
       }
       table {
         -fs-table-paginate: paginate;
@@ -39,15 +39,14 @@
       }
 
       .main-container {
-        width: 370.41667mm;
+        width: 210mm;
         box-sizing: border-box;
-        height: 285.750264583mm;
-        padding: 54px;
-        background: #f2f1f0;
+        height: 297mm;
+        padding: 20px 48px;
         position: relative;
+        border-top: 5px solid #A63227;
       }
       .outer-border-container {
-        border: 2px solid #bbb;
         height: 972px;
         width: 100%;
         background: #fff;
@@ -60,7 +59,6 @@
         position: absolute;
         width: 17px;
         height: 17px;
-        border: 2px solid #bbb;
       }
       #top-left-corner {
         top: -11px;
@@ -79,22 +77,13 @@
         right: -11px;
       }
       .inner-border-container {
-        border: 2px solid #bbb;
         height: 960px;
         width: 100%;
         background: #fff;
         position: relative;
         box-sizing: border-box;
       }
-      /* .inner-container:after {
-        content: " ";
-        position: absolute;
-        top: 7px;
-        left: 7px;
-        right: 7px;
-        bottom: 7px;
-        border: 2px solid #bbb;
-      } */
+   
       .pintar-logo {
         position: absolute;
         box-sizing: border-box;
@@ -105,23 +94,25 @@
       .left-container {
         box-sizing: border-box;
         float: left;
-        padding-left: 66px;
+        /* padding-left: 66px;
         padding-bottom: 66px;
         padding-right: 66px;
-        padding-top: 182px;
-        height: 960px;
-        width: 366px;
+        padding-top: 182px; */
+        /* height: 960px;
+        width: 60%; */
+        width: 60%;
         position: relative;
       }
       .right-container {
         box-sizing: border-box;
         float: right;
-        padding-top: 120px;
+        /* padding-top: 120px;
         padding-bottom: 66px;
         padding-right: 60px;
-        padding-left: 40px;
-        width: 908px;
-        height: 960px;
+        padding-left: 40px; */
+        /* width: 908px;
+        height: 960px; */
+        width: 30%;
         position: relative;
       }
 
@@ -179,16 +170,7 @@
         line-height: 28px;
         letter-spacing: 0.24px;
       }
-      .certificate-description .username {
-        box-sizing: border-box;
-        color: #a58c6d;
-        font-family: 'Pintar Display';
-        font-size: 56px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1;
-        letter-spacing: -0.56px;
-      }
+
       .certificate-description .course-name {
         box-sizing: border-box;
         color: #535353;
@@ -257,22 +239,22 @@
 
       .competency-container {
         box-sizing: border-box;
-        padding: 66px;
+        /* padding: 66px; */
         padding-top: 0;
         height: 956px;
         width: 1276px;
         position: relative;
       }
       .competency-container .competency-heading {
-        color: #535353;
+        color: #848484;
         font-family: 'Pintar Text';
-        font-size: 48px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 64px; /* 133.333% */
         letter-spacing: -0.48px;
         text-align: left;
-        padding-top: 188px;
+        padding-top: 12px;
       }
 
       .competency-list-container {
@@ -377,7 +359,7 @@ line-height: 18px;
         </div>
         <div style="clear: both;"></div>
     </header>
-      <div class="outer-border-container" style="box-sizing: border-box">
+      <div class="outer-border-container left-container" style="box-sizing: border-box">
      
         <div class="inner-border-container" style="box-sizing: border-box">
           <div class="competency-container">
@@ -390,7 +372,31 @@ line-height: 18px;
               <thead>
                 <tr>
                   <th colspan="2" class="competency-heading">
-                    Kompetensi yang dilatih
+                   Summary
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" colspan="2">
+                    <ul class="competency-list-container">
+                        <div class="marginTop">{{summary}}</div>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td style="padding: 6px" rowspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+              </tfoot>
+              <thead>
+                <tr>
+                  <th colspan="2" class="competency-heading">
+                   Experience
                   </th>
                 </tr>
               </thead>
@@ -399,6 +405,29 @@ line-height: 18px;
                   <td rowspan="2" colspan="2">
                     <ul class="competency-list-container">
                         <div class="marginTop">{{experience}}</div>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td style="padding: 6px" rowspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+              </tfoot>
+              <thead>
+                <tr>
+                  <th colspan="2" class="competency-heading">
+                   Education
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" colspan="2">
+                    <ul class="competency-list-container">
                         <div class="marginTop">{{education}}</div>
                     </ul>
                   </td>
@@ -406,15 +435,41 @@ line-height: 18px;
               </tbody>
               <tfoot>
                 <tr>
-                  <td style="padding: 46px" rowspan="2">&nbsp;</td>
+                  <td style="padding: 6px" rowspan="2">&nbsp;</td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
                 </tr>
               </tfoot>
             </table>
+          
           </div>
         </div>
+      </div>
+      <div class="right-container">
+        <div style="box-sizing: border-box" class="certificate-description">
+            <div style="margin-bottom: 30px; box-sizing: border-box">
+              <p
+                class="certificate-description-text"
+                style="margin-bottom: 23px; box-sizing: border-box"
+              >
+               Skills
+              </p>
+              <p style="box-sizing: border-box" class="username">
+                {{skills}}
+              </p>
+            </div>     <div style="margin-bottom: 30px; box-sizing: border-box">
+                <p
+                  class="certificate-description-text"
+                  style="margin-bottom: 23px; box-sizing: border-box"
+                >
+                 social media
+                </p>
+                <p style="box-sizing: border-box" class="username">
+                  {{socialMedia}}
+                </p>
+              </div></div>
+
       </div>
     </div>
   </body>
