@@ -37,14 +37,18 @@
                 page-break-inside: avoid; /* Avoid splitting content within a page */
                 page-break-after: always; /* Force page break after each section */
             }
-
+.borderT{
+    border-top: 5px solid #a63227;
+    position: relative;
+    top:0
+}
             .main-container {
                 width: 210mm;
                 box-sizing: border-box;
                 height: 297mm;
-                padding: 20px 48px;
+                padding:0px;
                 position: relative;
-                border-top: 5px solid #a63227;
+        
             }
             .outer-border-container {
                 height: 972px;
@@ -366,7 +370,8 @@
     </head>
     <body style="box-sizing: border-box;">
         <div class="main-container certificate-page {{competencyPageClass}}" style="box-sizing: border-box; z-index: 999;">
-            <header>
+            <div class="borderT"></div>
+            <header style="padding:20px 48px 12px 48px">
                 <div class="row">
                     <div>
                         <div class="name">
@@ -377,7 +382,7 @@
                 </div>
                 <div style="clear: both;"></div>
             </header>
-            <div class="outer-border-container left-container" style="box-sizing: border-box;">
+            <div class="outer-border-container left-container" style="box-sizing: border-box;padding:0px 0px 12px 48px">
                 <div class="inner-border-container" style="box-sizing: border-box;">
                     <div class="competency-container">
                         <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
@@ -390,7 +395,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td rowspan="2" colspan="2">
+                                    <td >
                                         <ul class="competency-list-container">
                                             <div class="marginTop">{{summary}}</div>
                                         </ul>
@@ -414,7 +419,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td rowspan="2" colspan="2">
+                                    <td >
                                         <ul class="competency-list-container">
                                             <div class="marginTop">{{experience}}</div>
                                         </ul>
@@ -431,7 +436,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td rowspan="2" colspan="2">
+                                    <td >
                                         <ul class="competency-list-container">
                                             <div class="marginTop">{{education}}</div>
                                         </ul>
