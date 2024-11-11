@@ -26,9 +26,7 @@
                 width: 210mm;
                 box-sizing: border-box;
                 height: 268mm;
-                /* padding:0px 22px 36px 36px; */
                 position: relative;
-                /* background-color: black; */
                 
             }
             .outer-border-container {
@@ -37,13 +35,10 @@
                 background: #fff;
                 position: relative;
                 box-sizing: border-box;
-                /* padding: 4px; */
-                /* background: yellow; */
             }
             .inner-border-container {
                 height: 940px;
                 width: 100%;
-                /* background: red; */
                 position: relative;
                 box-sizing: border-box;
                 
@@ -53,6 +48,7 @@
                 float: left;
                 width: 68%;
                 position: relative;
+                padding-top: 16px;
             }
             .right-container {
                 box-sizing: border-box;
@@ -70,6 +66,7 @@
                 line-height: 28px;
                 letter-spacing: 0.24px;
                 word-break: break-all;
+                padding-top: 16px;
             }
             .name {
                 padding-top: 20px;
@@ -237,31 +234,31 @@
             <div class="right-container">
                 <div style="box-sizing: border-box;" class="cv-template-description">
                     <div style="margin-bottom: 12px; box-sizing: border-box;">
-                        <p style="margin-bottom: 2px; box-sizing: border-box;" class="summaryDesc">
+                        <div style="margin-bottom: 0px; box-sizing: border-box;" class="summaryDesc">
                             {{email}}
-                        </p>
-                        <p style="margin-bottom: 2px; box-sizing: border-box;" class="summaryDesc">
+                        </div>
+                        <div style="margin-bottom: 2px; box-sizing: border-box;" class="summaryDesc">
                             {{phone}}
-                        </p>
-                        <p style="box-sizing: border-box;" class="summaryDesc">
+                        </div>
+                        <div style="box-sizing: border-box;" class="summaryDesc">
                             {{location}}
-                        </p>
+                        </div>
                     </div>
                     <div style="margin-bottom: 12px; box-sizing: border-box;">
-                        <p class="right-side-heading" style="margin-bottom: 8px; box-sizing: border-box;">
+                        <p class="right-side-heading" style="margin-bottom: 4px; box-sizing: border-box;">
                             Skills
                         </p>
-                        <p style="box-sizing: border-box;">
+                        <div style="box-sizing: border-box;">
                             {{skills}}
-                        </p>
+                        </div>
                     </div>
                     <div class="{{socialMediaHide}}" style="box-sizing: border-box;">
-                        <p class="right-side-heading" style="margin-bottom: 8px; box-sizing: border-box;">
+                        <p class="right-side-heading" style="margin-bottom: 4px; box-sizing: border-box;">
                             Social Media and Portfolio
                         </p>
-                        <p style="box-sizing: border-box;" class="socialMediaItem">
+                        <div style="box-sizing: border-box;" class="socialMediaItem">
                             {{socialMedia}}
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
