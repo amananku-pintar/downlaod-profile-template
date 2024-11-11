@@ -6,7 +6,7 @@
                 margin: 0px;
                 box-sizing: border-box;
                 size: 210mm 297mm;
-                padding-top: 36px !important;
+                padding: 36px !important;
             }
             table {
                 -fs-table-paginate: paginate;
@@ -33,11 +33,11 @@
             body {
                 margin: 0;
                 box-sizing: border-box;
-                padding-top: 48px;
+                /* padding: 36px; */
             }
             .cv-templated-page {
                 page-break-inside: always; 
-                padding-top: 48px;/* Avoid splitting content within a page */
+                padding: 36px;/* Avoid splitting content within a page */
             }
             .borderT {
                 border-top: 5px solid #a63227;
@@ -216,8 +216,7 @@
     </head>
     <body style="box-sizing: border-box;">
         <div class="main-container cv-templated-page {{competencyPageClass}}" style="box-sizing: border-box; z-index: 999;">
-            <div class="borderT"></div>
-            <header style="padding: 36px 48px 12px 48px;">
+            <header>
                 <div class="row">
                     <div>
                         <div class="name">
@@ -227,7 +226,7 @@
                     </div>
                 </div>
             </header>
-            <div class="outer-border-container left-container" style="box-sizing: border-box; padding: 0px 0px 36px 48px;">
+            <div class="outer-border-container left-container" style="box-sizing: border-box;">
                 <div class="inner-border-container" style="box-sizing: border-box;">
                     <div class="competency-container">
                         <div class="competency-heading">
