@@ -1,242 +1,243 @@
 <!DOCTYPE html PUBLIC "-//OPENHTMLTOPDF//DOC XHTML Character Entities Only 1.0//EN" "">
 <html>
-    <head>
-        <style>
-            @page {
-                margin: 0px;
-                box-sizing: border-box;
-                size: 210mm 297mm;
-                padding: 43px 36px;
-            }
+<head>
+    <style>
+        @page {
+            margin: 0px;
+            box-sizing: border-box;
+            size: 210mm 297mm;
+            padding: 43px 36px;
+        }
 
-            html {
-                box-sizing: border-box;
-                font-family: sans-serif;
-                font-size: 14px;
-            }
-            body {
-                margin: 0;
-                box-sizing: border-box;
-              
-            }
-            .cv-templated-page {
-                page-break-inside: always; 
-            }
-            .main-container {
-                width: 210mm;
-                box-sizing: border-box;
-                height: 268mm;
-                position: relative;
-                
-            }
-            .outer-border-container {
-                height: 940px;
-                width: 93%;
-                background: #fff;
-                position: relative;
-                box-sizing: border-box;
-            }
-            .inner-border-container {
-                height: 940px;
-                width: 100%;
-                position: relative;
-                box-sizing: border-box;
-                
-            }
-            .left-container {
-                box-sizing: border-box;
-                float: left;
-                width: 68%;
-                position: relative;
-                padding-top: 16px;
-            }
-            .right-container {
-                box-sizing: border-box;
-                float: right;
-                width: 30%;
-                position: relative;
-            }
-            .cv-template-description .right-side-heading {
-                box-sizing: border-box;
-                color: #535353;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 700;
-                font-weight: bolder;
-                line-height: 28px;
-                letter-spacing: 0.24px;
-                word-break: break-all;
-                padding-top: 16px;
-            }
-            .name {
-                padding-top: 20px;
-                color: #333;
-                font-size: 26px;
-                font-weight: 700;
-                margin: 0;
-                word-wrap: break-word;
-            }
-            .designation {
-                color: #535353;
-                font-size: 18px;
-                margin: 0;
-                margin-bottom: 16px;
-            }
-            .cv-template-description .course-name {
-                box-sizing: border-box;
-                color: #535353;
-                font-size: 28px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 120%;
-                letter-spacing: -0.28px;
-            }
-            .summary-education-exp-container {
-                box-sizing: border-box;
-                height: 940px;
-                width: 100%;
-                position: relative;
-            }
-            .summary-education-exp-container .summary-education-exp-heading {
-                color: #848484;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 18px;
-                letter-spacing: 2px;
-                text-align: left;
-            }
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        body {
+            margin: 0;
+            box-sizing: border-box;
 
-            .summary-education-exp-list-container {
-                list-style: none;
-                word-break: break-all;
-            }
-            .hidden {
-                display: none;
-            }
-            .socialMediaHide {
-                display: none;
-            }
-            .userPosition {
-                color: #333;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 18px;
-            }
-            .companyName {
-                color: #535353;
-                font-size: 10px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 18px;
-            }
-            .userDuration {
-                color: #848484;
-                font-size: 9px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 18px;
-            }
-            .description {
-                color: #535353;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 18px;
-            }
-            .socialMediaItem {
-                color: #03629e !important;
-                font-size: 11px;
-                text-decoration-line: underline !important;
-                word-break: break-all;
-                list-style-type: none;
-            }
-            .social {
-                color: #535353;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 18px;
-            }
-            .summaryDesc {
-                color: #535353;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 18px;
-                list-style-type: none;
-            }
-        </style>
-    </head>
-    <body style="box-sizing: border-box;">
-        <div class="main-container cv-templated-page" style="box-sizing: border-box; z-index: 999;">
-            <header>
-                <div class="row">
-                    <div>
-                        <div class="name">
-                            <div>{{fullName}}</div>
-                        </div>
-                        <div class="designation">{{designation}}</div>
-                    </div>
+        }
+        .cv-templated-page {
+            page-break-inside: always;
+        }
+        .main-container {
+            width: 210mm;
+            box-sizing: border-box;
+            height: 268mm;
+            position: relative;
+
+        }
+        .outer-border-container {
+            height: 940px;
+            width: 93%;
+            background: #fff;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .inner-border-container {
+            height: 940px;
+            width: 100%;
+            position: relative;
+            box-sizing: border-box;
+
+        }
+        .left-container {
+            box-sizing: border-box;
+            float: left;
+            width: 68%;
+            position: relative;
+            padding-top: 16px;
+        }
+        .right-container {
+            box-sizing: border-box;
+            float: right;
+            width: 30%;
+            position: relative;
+        }
+        .cv-template-description .right-side-heading {
+            box-sizing: border-box;
+            color: #535353;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            font-weight: bolder;
+            line-height: 28px;
+            letter-spacing: 0.24px;
+            word-break: break-all;
+            padding-top: 16px;
+        }
+        .name {
+            padding-top: 20px;
+            color: #333;
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+            word-wrap: break-word;
+        }
+        .designation {
+            color: #535353;
+            font-size: 18px;
+            margin: 0;
+            margin-bottom: 16px;
+        }
+        .cv-template-description .course-name {
+            box-sizing: border-box;
+            color: #535353;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.28px;
+        }
+        .summary-education-exp-container {
+            box-sizing: border-box;
+            height: 940px;
+            width: 100%;
+            position: relative;
+        }
+        .summary-education-exp-container .summary-education-exp-heading {
+            color: #848484;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 2px;
+            text-align: left;
+        }
+
+        .summary-education-exp-list-container {
+            list-style: none;
+            word-break: break-all;
+        }
+        .hidden {
+            display: none;
+        }
+        .socialMediaHide {
+            display: none;
+        }
+        .userPosition {
+            color: #333;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+        }
+        .companyName {
+            color: #535353;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+        }
+        .userDuration {
+            color: #848484;
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+        }
+        .description {
+            color: #535353;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+        }
+        .socialMediaItem {
+            color: #03629e !important;
+            font-size: 11px;
+            text-decoration-line: underline !important;
+            word-break: break-all;
+            list-style-type: none;
+            margin-bottom: 4px;
+        }
+        .social {
+            color: #535353;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+        }
+        .summaryDesc {
+            color: #535353;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body style="box-sizing: border-box;">
+<div class="main-container cv-templated-page" style="box-sizing: border-box; z-index: 999;">
+    <header>
+        <div class="row">
+            <div>
+                <div class="name">
+                    <div>{{fullName}}</div>
                 </div>
-            </header>
-            <div class="outer-border-container left-container" style="box-sizing: border-box;">
-                <div class="inner-border-container" style="box-sizing: border-box;">
-                    <div class="summary-education-exp-container">
-                        <div class="summary-education-exp-heading">
-                            Summary
-                        </div>
-                        <div class="summary-education-exp-list-container summaryDesc">
-                            {{summary}}
-                        </div>
-                        <div class="summary-education-exp-heading" style="margin-top: 12px;">
-                            Experience
-                        </div>
-                        <div class="summary-education-exp-list-container">
-                            {{experience}}
-                        </div>
-                        <div class="summary-education-exp-heading" style="margin-top: 12px;">
-                            Education
-                        </div>
-                        <div class="summary-education-exp-list-container">
-                            {{education}}
-                        </div>
-                        <div style="padding: 36px"></div>
-                    </div>
+                <div class="designation">{{designation}}</div>
+            </div>
+        </div>
+    </header>
+    <div class="outer-border-container left-container" style="box-sizing: border-box;">
+        <div class="inner-border-container" style="box-sizing: border-box;">
+            <div class="summary-education-exp-container">
+                <div class="summary-education-exp-heading">
+                    Summary
+                </div>
+                <div class="summary-education-exp-list-container summaryDesc">
+                    {{summary}}
+                </div>
+                <div class="summary-education-exp-heading" style="margin-top: 12px;">
+                    Experience
+                </div>
+                <div class="summary-education-exp-list-container" style="white-space: pre-wrap">
+                    {{experience}}
+                </div>
+                <div class="summary-education-exp-heading" style="margin-top: 12px;">
+                    Education
+                </div>
+                <div class="summary-education-exp-list-container" style="white-space: pre-wrap">
+                    {{education}}
+                </div>
+                <div style="padding: 36px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="right-container">
+        <div style="box-sizing: border-box;" class="cv-template-description">
+            <div style="margin-bottom: 12px; box-sizing: border-box;">
+                <div style="margin-bottom: 0px; box-sizing: border-box;" class="summaryDesc">
+                    {{email}}
+                </div>
+                <div style="margin-bottom: 2px; box-sizing: border-box;" class="summaryDesc">
+                    {{phone}}
+                </div>
+                <div style="box-sizing: border-box;" class="summaryDesc">
+                    {{location}}
                 </div>
             </div>
-            <div class="right-container">
-                <div style="box-sizing: border-box;" class="cv-template-description">
-                    <div style="margin-bottom: 12px; box-sizing: border-box;">
-                        <div style="margin-bottom: 0px; box-sizing: border-box;" class="summaryDesc">
-                            {{email}}
-                        </div>
-                        <div style="margin-bottom: 2px; box-sizing: border-box;" class="summaryDesc">
-                            {{phone}}
-                        </div>
-                        <div style="box-sizing: border-box;" class="summaryDesc">
-                            {{location}}
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 12px; box-sizing: border-box;">
-                        <p class="right-side-heading" style="margin-bottom: 4px; box-sizing: border-box;">
-                            Skills
-                        </p>
-                        <div style="box-sizing: border-box;">
-                            {{skills}}
-                        </div>
-                    </div>
-                    <div class="{{socialMediaHide}}" style="box-sizing: border-box;">
-                        <p class="right-side-heading" style="margin-bottom: 4px; box-sizing: border-box;">
-                            Social Media and Portfolio
-                        </p>
-                        <div style="box-sizing: border-box;" class="socialMediaItem">
-                            {{socialMedia}}
-                        </div>
-                    </div>
+            <div style="margin-bottom: 12px; box-sizing: border-box;">
+                <p class="right-side-heading" style="margin-bottom: 4px; box-sizing: border-box;">
+                    Skills
+                </p>
+                <div style="box-sizing: border-box;">
+                    {{skills}}
+                </div>
+            </div>
+            <div class="{{socialMediaHide}}" style="box-sizing: border-box;">
+                <p class="right-side-heading" style="margin-bottom: 4px; box-sizing: border-box;">
+                    Social Media and Portfolio
+                </p>
+                <div style="box-sizing: border-box;" class="{{socialMediaItem}}">
+                    {{socialMedia}}
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</div>
+</body>
 </html>
