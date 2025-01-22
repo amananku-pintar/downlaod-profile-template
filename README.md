@@ -19,3 +19,4 @@ Ticket :
 4. [ASSIGNED COURSE PARTICULAR DURATION](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/assigned-course-particular-duration.html)
 5. [ASSIGNED COURSE DEADLINE](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/assigned-course-deadline.html)
 6. [DOWNLOAD_CV](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/my-profile-new-resume.html)
+7. [DOWNLOAD_CV_24px](https://htmlpreview.github.io/?https://github.com/amananku-pintar/downlaod-profile-template/blob/main/cv.html)
