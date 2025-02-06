@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//OPENHTMLTOPDF//DOC XHTML Character Entities Only 1.0//EN">
+<html>
+<head>
+    <style>
+        @page {
+            margin: 0;
+            size: A4;
+            padding: 43px 36px;
+        }
+
+        html, body {
+            font-family: sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cv-templated-page {
+            margin-bottom: 20px;
+        }
+
+        .main-container {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .outer-border-container {
+            width: 93%;
+            background: #fff;
+            position: relative;
+            box-sizing: border-box;
+            padding: 0;
+            page-break-inside: avoid;
+        }
+
+        .inner-border-container {
+            width: 100%;
+            position: relative;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+
+        .left-container {
+            width: 58%;
+            float: left;
+            padding-right: 20px;
+            box-sizing: border-box;
+            page-break-inside: auto;
+        }
+
+        .right-container {
+            width: 40%;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+
+        /* FullName and Designation with 24px font */
+        .name {
+            padding-top: 20px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            word-wrap: break-word;
+        }
+
+        .designation {
+            color: #535353;
+            font-size: 24px;
+            margin: 0;
+            margin-bottom: 16px;
+            word-wrap: break-word;
+        }
+
+        /* Section headings with 24px font */
+        .section-heading {
+            color: #848484;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 14px;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+
+        /* Other placeholders like summary, experience, education, etc. with 12px font */
+        .section-content {
+            list-style: none;
+            word-break: break-all;
+            font-size: 12px;
+            word-wrap: break-word;
+            color: #535353;
+        }
+
+        .summaryDesc {
+            color: #535353;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            list-style-type: none;
+            word-wrap: break-word;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive handling for social media visibility */
+        .socialMediaHide {
+            display: none;
+        }
+
+        .companyName {
+            color: #535353;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        .userPosition {
+            color: #333;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+        .userDuration {
+            color: #848484;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        .description {
+            color: #535353;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            white-space: pre-wrap;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .contact-details div {
+            color: #535353;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            list-style-type: none;
+            word-wrap: break-word;
+            margin-bottom: 6px;
+        }
+
+        /* Style for clickable social media links */
+        .socialMediaItem {
+            color: #03629E !important;
+            font-size: 12px;
+            text-decoration: underline !important;
+            word-wrap: break-word;
+            list-style-type: none;
+            margin-bottom: 4px;
+            overflow-wrap: break-word;
+            white-space: normal;
+            overflow: auto;
+            width: fit-content;
+        }
+
+        .socialMedia {
+            color: #535353;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="main-container cv-templated-page">
+    <header>
+        <div>
+            <h1 class="name">{{fullName}}</h1>
+            <p class="designation">{{designation}}</p>
+        </div>
+    </header>
+
+    <div class="outer-border-container clearfix">
+        <div class="left-container">
+            <section>
+                <h2 class="section-heading">Summary</h2>
+                <div class="section-content">{{summary}}</div>
+            </section>
+
+            <section>
+                <h2 class="section-heading">Experience</h2>
+                <div class="section-content">{{experience}}</div>
+            </section>
+
+            <section>
+                <h2 class="section-heading">Education</h2>
+                <div class="section-content">{{education}}</div>
+            </section>
+        </div>
+
+        <div class="right-container">
+            <section class="contact-details">
+                <div>{{email}}</div>
+                <div>{{phone}}</div>
+                <div>{{location}}</div>
+            </section>
+
+            <section>
+                <h2 class="section-heading">Skills</h2>
+                <div class="section-content">{{skills}}</div>
+            </section>
+
+
+            <div class="{{socialMediaHide}}" style="box-sizing: border-box;">
+                <p class="section-heading" style="margin-bottom: 4px; box-sizing: border-box;">
+                    Social Media <br/> and Portfolio
+                </p>
+                <div class="socialMedia" style="box-sizing: border-box;font-size: 12px;">
+                    {{socialMedia}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
